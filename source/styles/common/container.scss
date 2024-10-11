@@ -1,8 +1,22 @@
-.container {
-  display: block;
-  margin: 0 auto;
-  padding-left: 28px;
-  padding-right: 28px;
-  width: 320px;
-  max-width: 1440px;
+@media (min-width: 320px) {
+  .container {
+    display: block;
+    margin: 0 auto;
+    padding-left: 28px;
+    padding-right: 28px;
+    width: 320px;
+    max-width: 1440px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 1440px;
+  }
 }

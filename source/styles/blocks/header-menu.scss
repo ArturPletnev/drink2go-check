@@ -1,5 +1,13 @@
 .header-menu {
   padding-left: 88px;
+
+  @include tablet {
+    padding-left: 26px;
+  }
+
+  @include desktop {
+    padding-left: 141px;
+  }
 }
 
 .header-menu__list {
@@ -7,6 +15,14 @@
 
   display: flex;
   flex-wrap: wrap;
+}
+
+.header-menu__item {
+  @include desktop {
+    &--basket {
+      margin-left: 40px;
+    }
+  }
 }
 
 
@@ -35,6 +51,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
+
+    @include desktop {
+      left: 6px;
+      top: 55%;
+      transform: translate(0, -50%);
+    }
   }
 
   &--enter::before {
@@ -44,8 +66,28 @@
   &--basket::before {
     mask-image: url("../../icons/stack.svg#basket");
   }
+
+  @include tablet {
+    padding: 28px 30px 27px;
+  }
+
+  @include desktop {
+    padding: 20px 15px 15px 30px;
+  }
 }
 
 .header-menu__item-button-span {
   display: none;
+
+  @include desktop {
+    display: block;
+    font-family: "Montserrat-regular", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: $base-black;
+    text-transform: uppercase;
+  }
 }

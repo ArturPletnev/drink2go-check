@@ -8,19 +8,63 @@
   padding: 12px 5px 10px 20px;
   position: relative;
   margin: 0;
+
+  @include tablet {
+    padding-top: 13px;
+  }
+
+  @include desktop {
+    padding: 12px 40px;
+  }
 }
 
 .header__logo {
   display: flex;
+  align-items: center;
 }
 
 .header__logo-text {
   display: none;
+  font-family: "Montserrat-regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  color: $base-black;
+
+  @include desktop {
+    display: block;
+    padding-left: 20px;
+    width: 152px;
+  }
 }
 
 .header__nav {
+  position: absolute;
+  z-index: 2;
+  background-color: $base-white;
+  top: 60px;
+  left: 0;
+  width: 100%;
   display: none;
+
+  &--opened {
+    display: block;
+  }
+
+  @include tablet {
+    display: block;
+    position: static;
+    width: 500px;
+    padding-left: 68px;
+  }
+
+  @include desktop {
+    padding-left: 155px;
+    width: 650px;
+  }
 }
+
 
 .header__button-toggle {
   position: relative;
@@ -39,5 +83,17 @@
     background-color: $base-black;
     transform: translate(-50%, -50%);
     mask-image: url("../../icons/stack.svg#burger");
+  }
+
+  &--open {
+    display: block;
+    mask-image: url("../../icons/stack.svg#close");
+    width: 16px;
+    height: 16px;
+    background-color: $base-black;
+  }
+
+  @include tablet {
+    display: none;
   }
 }
