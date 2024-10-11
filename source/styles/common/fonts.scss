@@ -1,1 +1,15 @@
-/* здесь подключите шрифты */
+@font-face {
+  font-family: "Montserrat-regular";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../fonts/montserrat-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Montserrat-medium";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../../fonts/montserrat-medium.woff2") format("woff2");
+}

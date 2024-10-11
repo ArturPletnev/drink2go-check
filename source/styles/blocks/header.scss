@@ -1,5 +1,43 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  background-color: $base-white;
+  position: relative;
+}
+
+.header__wrapper {
+  display: flex;
+  padding: 12px 5px 10px 20px;
+  position: relative;
+  margin: 0;
+}
+
+.header__logo {
+  display: flex;
+}
+
+.header__logo-text {
+  display: none;
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__button-toggle {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  padding: 16px 27px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 53%;
+    top: 45%;
+    background-color: $base-black;
+    transform: translate(-50%, -50%);
+    mask-image: url("../../icons/stack.svg#burger");
+  }
 }
