@@ -1,0 +1,128 @@
+.slider {
+  padding-top: 20px;
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.slider__list {
+  @include list;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.slider__item {
+  display: none;
+
+  &--current {
+    display: block;
+  }
+}
+
+.slider__wrapper {
+  text-align: center;
+  padding-right: 2px;
+}
+
+.slider__paragraph {
+  margin: 0;
+  font-family: "Montserrat-bold", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: $base-primary;
+  text-transform: uppercase;
+  padding-top: 6px;
+  padding-bottom: 4px;
+}
+
+.slider__title {
+  margin: 0;
+  font-family: "Montserrat-bold", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: $base-black;
+  padding-bottom: 10px;
+}
+
+.slider__description {
+  margin: 0;
+  font-family: "Montserrat-regular", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: $base-black;
+  padding-bottom: 20px;
+}
+
+.slider__order {
+  display: flex;
+  align-items: center;
+  padding-left: 23px;
+}
+
+.slider__order-price {
+  margin: 0;
+
+  &--old {
+    font-family: "Montserrat-regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: $base-primary;
+    text-decoration: line-through;
+    padding-top: 2px;
+    padding-right: 6px;
+  }
+
+  &--new {
+    font-family: "Montserrat-semibold", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px;
+    text-align: left;
+    counter-reset: $base-black;
+    padding-right: 22px;
+  }
+}
+
+.slider__pagination {
+  display: none;
+}
+
+.slider__button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  &::after {
+    content: "";
+    mask-image: url("../../icons/stack.svg#arrow");
+    width: 20px;
+    height: 20px;
+    background-color: $base-primary;
+    display: block;
+    border: none;
+  }
+
+  &--next::after {
+    transform: rotate(180deg);
+  }
+}
+
+.slider__controls {
+  position: absolute;
+  top: 317px;
+  left: -9px;
+  width: 334px;
+  display: flex;
+  justify-content: space-between;
+}

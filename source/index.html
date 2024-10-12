@@ -65,10 +65,16 @@
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков drink2go</h1>
     <section class="hero" data-test="hero">
       <h2 class="visually-hidden">Промо блок</h2>
-      <div class="hero__slider slider">
+      <div class="hero__slider slider container">
         <ul class="slider__list">
-          <li class="slider__item">
-            <img class="slider-img" src="#" alt="Баночка с кофейным напитком">
+          <li class="slider__item slider__item--current">
+            <picture class="slider__img-wrapper">
+              <source  srcset="images/flat-white-hero-desktop.png" width="600" height="600"
+                media="(min-width: 1440px)">
+              <source  srcset="images/flat-white-hero-tablet.png" width="476" height="476"
+                media="(min-width: 768px)">
+              <img class="slider__img" src="images/flat-white-hero-mob.png" width="300" height="300" alt="Баночка с кофейным напитком">
+            </picture>
             <div class="slider__wrapper">
               <p class="slider__paragraph">Новинка!</p>
               <h3 class="slider__title">Декаф Флэт Уайт</h3>
@@ -79,11 +85,17 @@
             <div class="slider__order">
               <p class="slider__order-price slider__order-price--old">295₽</p>
               <p class="slider__order-price slider__order-price--new">225₽</p>
-              <button class="slider__order-button" type="button">Заказать</button>
+              <button class="slider__order-button page__button" type="button">Заказать</button>
             </div>
           </li>
           <li class="slider__item">
-            <img class="slider-img" src="#" alt="Баночка с кофейным напитком">
+            <picture class="slider__img-wrapper">
+              <source  srcset="images/lavander-hero-desktop.png" width="600" height="600"
+                media="(min-width: 1440px)">
+              <source  srcset="images/lavander-hero-tablet.png" width="476" height="476"
+                media="(min-width: 768px)">
+              <img class="slider__img" src="images/lavander-hero-mob.png" width="280" height="280" alt="Баночка с кофейным напитком">
+            </picture>
             <div class="slider__wrapper">
               <p class="slider__paragraph">Новинка!</p>
               <h3 class="slider__title">Лавандовый Латте</h3>
@@ -93,11 +105,17 @@
             <div class="slider__order">
               <p class="slider__order-price slider__order-price--old">285₽</p>
               <p class="slider__order-price slider__order-price--new">265₽</p>
-              <button class="slider__order-button" type="button">Заказать</button>
+              <button class="slider__order-button page__button" type="button">Заказать</button>
             </div>
           </li>
           <li class="slider__item">
-            <img class="slider-img" src="#" alt="Баночка с кофейным напитком">
+            <picture class="slider__img-wrapper">
+              <source  srcset="images/espresso-hero-desktop.png" width="600" height="600"
+                media="(min-width: 1440px)">
+              <source  srcset="images/espresso-hero-tablet.png" width="476" height="476"
+                media="(min-width: 768px)">
+              <img class="slider__img" src="images/espresso-hero-mob.png" width="280" height="280" alt="Баночка с кофейным напитком">
+            </picture>
             <div class="slider__wrapper">
               <p class="slider__paragraph">Новинка!</p>
               <h3 class="slider__title">Тройной Эспрессо</h3>
@@ -107,15 +125,15 @@
             <div class="slider__order">
               <p class="slider__order-price slider__order-price--old">395₽</p>
               <p class="slider__order-price slider__order-price--new">375₽</p>
-              <button class="slider__order-button" type="button">Заказать</button>
+              <button class="slider__order-button page__button" type="button">Заказать</button>
             </div>
           </li>
         </ul>
         <div class="slider__controls">
-          <button class="slider__button slider-button-prev" type="button">
+          <button class="slider__button slider__button--prev" type="button">
             <span class="visually-hidden">Предыдущее фото</span>
           </button>
-          <button class="slider__button slider-button-next" type="button">
+          <button class="slider__button slider__button--next" type="button">
             <span class="visually-hidden">Следующее фото</span>
           </button>
         </div>
