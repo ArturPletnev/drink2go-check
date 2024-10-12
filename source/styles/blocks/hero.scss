@@ -1,3 +1,9 @@
 .hero {
-  background-color: $flat-white;
+  @include tablet {
+    padding-bottom: 198px;
+  }
+
+  @include desktop {
+    padding-bottom: 49px;
+  }
 }

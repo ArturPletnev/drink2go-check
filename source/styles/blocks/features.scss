@@ -1,0 +1,144 @@
+.features__wrapper {
+  padding-top: 50px;
+  padding-right: 5px;
+
+  @include tablet {
+    padding-right: 0;
+  }
+}
+
+.features__title {
+  font-family: "Montserrat-bold", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: $base-primary;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.features__description {
+  font-family: "Montserrat-bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  color: $base-black;
+  margin: 0;
+  padding-bottom: 105px;
+
+  @include tablet {
+    font-size: 42px;
+    line-height: 64px;
+    padding-bottom: 59px;
+  }
+
+  @include desktop {
+    padding-bottom: 157px;
+  }
+}
+
+.features__list {
+  @include list;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-left: 83px;
+    column-gap: 92px;
+  }
+
+  @include desktop {
+    grid-template-columns: 320px 320px 320px 320px;
+    grid-template-rows: 1fr;
+    padding-left: 18px;
+    column-gap: 28px;
+  }
+}
+
+.features__item-title {
+  margin: 0;
+  text-align: center;
+  padding-bottom: 10px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 52px;
+    height: 56px;
+    position: absolute;
+    bottom: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include tablet {
+      bottom: 0;
+      top: 4px;
+      left: -73px;
+      transform: translateX(0);
+    }
+
+    @include desktop {
+      top: -77px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &--speed::before {
+    background-image: url("../../images/speed.png");
+  }
+
+  &--fit::before {
+    background-image: url("../../images/fit.png");
+  }
+
+  &--energy::before {
+    background-image: url("../../images/energy.png");
+  }
+
+  &--eco::before {
+    background-image: url("../../images/eco.png");
+  }
+
+  @include tablet {
+    text-align: left;
+    font-size: 24px;
+    line-height: 36px;
+    padding-bottom: 12px;
+    letter-spacing: 0.4px;
+  }
+
+  @include desktop {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+}
+
+.features__item-description {
+  margin: 0;
+  font-family: "Montserrat-regular", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  padding-bottom: 101px;
+
+  @include tablet {
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 24px;
+  }
+
+  @include desktop {
+    text-align: center;
+  }
+}

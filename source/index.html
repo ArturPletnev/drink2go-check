@@ -65,9 +65,10 @@
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков drink2go</h1>
     <section class="hero" data-test="hero">
       <h2 class="visually-hidden">Промо блок</h2>
-      <div class="hero__slider slider container">
+      <div class="hero__slider slider">
         <ul class="slider__list">
-          <li class="slider__item slider__item--current">
+          <li class="slider__item slider__item--flat slider__item--current">
+            <div class="slider__list-wrapper container">
             <picture class="slider__img-wrapper">
               <source  srcset="images/flat-white-hero-desktop.png" width="600" height="600"
                 media="(min-width: 1440px)">
@@ -79,20 +80,22 @@
               <p class="slider__paragraph">Новинка!</p>
               <h3 class="slider__title">Декаф Флэт Уайт</h3>
               <p class="slider__description">Свежесваренный кофе без кофеина из Эфиопии
-                с натуральным фермерским молоком — то, что нужно
-                для расслабления после тяжёлого рабочего дня</p>
+                с&nbsp;натуральным фермерским молоком — то, что нужно
+                для&nbsp;расслабления после тяжёлого рабочего дня</p>
             </div>
             <div class="slider__order">
               <p class="slider__order-price slider__order-price--old">295₽</p>
               <p class="slider__order-price slider__order-price--new">225₽</p>
               <button class="slider__order-button page__button" type="button">Заказать</button>
             </div>
+          </div>
           </li>
-          <li class="slider__item">
+          <li class="slider__item slider__item--lavander">
+            <div class="slider__list-wrapper container">
             <picture class="slider__img-wrapper">
-              <source  srcset="images/lavander-hero-desktop.png" width="600" height="600"
+              <source  srcset="images/lavender-hero-desktop.png" width="600" height="600"
                 media="(min-width: 1440px)">
-              <source  srcset="images/lavander-hero-tablet.png" width="476" height="476"
+              <source  srcset="images/lavender-hero-tablet.png" width="476" height="476"
                 media="(min-width: 768px)">
               <img class="slider__img" src="images/lavander-hero-mob.png" width="280" height="280" alt="Баночка с кофейным напитком">
             </picture>
@@ -106,6 +109,7 @@
               <p class="slider__order-price slider__order-price--old">285₽</p>
               <p class="slider__order-price slider__order-price--new">265₽</p>
               <button class="slider__order-button page__button" type="button">Заказать</button>
+            </div>
             </div>
           </li>
           <li class="slider__item">
@@ -153,40 +157,36 @@
               <span class="visually-hidden">3 слайд</span>
             </button>
           </li>
-          <li class="slider__pagination-item">
-            <button class="slider__pagination-button" type="button">
-              <span class="visually-hidden">4 слайд</span>
-            </button>
-          </li>
         </ul>
 
       </div>
     </section>
 
-    <section class="features" data-test="features">
-      <h2 class="features__title">Приемущества</h2>
+    <section class="features container" data-test="features">
+      <div class="features__wrapper">
+      <h2 class="features__title">Преимущества</h2>
       <p class="features__description">Главные причины выбрать Drink2Go</p>
       <ul class="features__list">
         <li class="features__item">
-          <h3 class="features__item-title">Скорость</h3>
+          <h3 class="features__item-title features__item-title--speed">Скорость</h3>
           <p class="features__item-description">Готовый напиток всегда под рукой — просто открой банку</p>
         </li>
         <li class="features__item">
-          <h3 class="features__item-title">Удобство</h3>
+          <h3 class="features__item-title features__item-title--fit">Удобство</h3>
           <p class="features__item-description">Легко помещается и в карман,
-            и в маленькую сумочку</p>
+            и&nbsp;в&nbsp;маленькую сумочку</p>
         </li>
         <li class="features__item">
-          <h3 class="features__item-title">Бодрость</h3>
+          <h3 class="features__item-title features__item-title--energy">Бодрость</h3>
           <p class="features__item-description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
         </li>
         <li class="features__item">
-          <h3 class="features__item-title">Экологичность</h3>
+          <h3 class="features__item-title features__item-title--eco">Экологичность</h3>
           <p class="features__item-description">Вся упаковка сделана
-            из перерабатываемых материалов</p>
+            из&nbsp;перерабатываемых материалов</p>
         </li>
       </ul>
-
+      </div>
     </section>
 
     <section class="catalog" data-test="catalog">
