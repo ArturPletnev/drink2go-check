@@ -1,9 +1,12 @@
 .features__wrapper {
   padding-top: 50px;
-  padding-right: 5px;
 
   @include tablet {
-    padding-right: 0;
+    padding-bottom: 74px;
+  }
+
+  @include desktop {
+    padding-bottom: 95px;
   }
 }
 
@@ -63,7 +66,7 @@
 .features__item-title {
   margin: 0;
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 9px;
   position: relative;
 
   &::before {
@@ -129,7 +132,11 @@
   font-weight: 400;
   line-height: 20px;
   text-align: center;
-  padding-bottom: 101px;
+  padding-bottom: 102px;
+
+  &--eco {
+    padding-bottom: 60px;
+  }
 
   @include tablet {
     text-align: left;

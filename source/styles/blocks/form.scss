@@ -1,0 +1,198 @@
+.form__wrapper {
+  @include tablet {
+    display: flex;
+  }
+
+  @include desktop {
+    flex-direction: column;
+  }
+}
+
+.form__group {
+  border: 0 none;
+  padding: 0;
+  margin: 0;
+
+  &--milk {
+    @include tablet {
+      padding-left: 30px;
+    }
+  }
+
+  &--country {
+    @include tablet {
+      padding-left: 42px;
+    }
+  }
+
+  @include desktop {
+    padding-left: 0;
+  }
+}
+
+.form__group-title {
+  margin: 0;
+  font-family: "Montserrat-semibold", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  color: $base-black;
+  padding-bottom: 19px;
+
+  &--filter {
+    @include tablet {
+      padding-bottom: 21px;
+    }
+  }
+}
+
+.form__group-item {
+  padding-bottom: 30px;
+
+  @include tablet {
+    padding-bottom: 40px;
+  }
+
+  @include desktop {
+    padding-bottom: 29px;
+  }
+
+  &--country {
+    padding-bottom: 37px;
+  }
+}
+
+.form__list {
+  @include list;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.form__control {
+  position: relative;
+  padding-left: 31px;
+
+  &--checkbox {
+    padding-left: 49px;
+  }
+}
+
+.form__control-label {
+  font-family: "Montserrat-regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: $base-black;
+
+  &--disabled {
+    color: $base-grey;
+  }
+}
+
+.form__control-mark {
+  &--radio {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid $base-grey;
+    left: 0;
+    top: -3px;
+  }
+
+  &--checkbox {
+    position: absolute;
+    width: 42px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: $base-grey;
+    left: 0;
+    top: -2px;
+  }
+
+  &--checkbox::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: $base-white;
+    border-radius: 50%;
+    left: 2px;
+    top: 2px;
+  }
+}
+
+.form__control-input {
+  position: relative;
+
+
+  &[type="radio"]:disabled+.form__control-mark {
+    border: 2px solid $form;
+  }
+
+
+  &[type="radio"]:checked+.form__control-mark {
+    border: 2px solid $base-primary;
+  }
+
+  &[type="radio"]:checked+.form__control-mark::after {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $base-primary;
+    width: 16px;
+    height: 16px;
+    border: none;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+  &[type="checkbox"]:checked+.form__control-mark--checkbox::after {
+    transform: translateX(18px);
+  }
+
+  &[type="checkbox"]:checked+.form__control-mark--checkbox {
+    background-color: $base-primary;
+  }
+
+  &[type="checkbox"]:disabled+.form__control-mark {
+    background-color: $form;
+  }
+}
+
+.form__group-buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding-bottom: 45px;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 20px;
+  }
+
+  @include desktop {
+    justify-content: flex-start;
+  }
+}
+
+.form__group-button {
+  @include desktop {
+    padding: 8px 26px;
+  }
+
+  &--reset {
+    background-color: $base-white;
+    color: $base-primary;
+    padding: 8px 35px;
+  }
+}

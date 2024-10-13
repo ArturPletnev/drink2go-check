@@ -1,0 +1,107 @@
+.range {
+  padding: 11px 0;
+  padding-bottom: 107px;
+
+  @include desktop {
+    padding-bottom: 105px;
+  }
+}
+
+.range__scale {
+  position: relative;
+  width: 280px;
+  height: 2px;
+  background-color: $form;
+
+  @include tablet {
+    width: 223px;
+  }
+
+  @include desktop {
+    width: 318px;
+  }
+}
+
+.range__bar {
+  position: absolute;
+  width: 260px;
+  background-color: $primary-lighter;
+  height: 4px;
+
+  @include tablet {
+    width: 203px;
+  }
+
+  @include desktop {
+    width: 298px;
+  }
+}
+
+.range__toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid $primary-lighter;
+  background-color: $base-white;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &--max {
+    right: 0;
+  }
+}
+
+.range__input-wrapper {
+  position: relative;
+  padding-top: 38px;
+  display: flex;
+  justify-content: space-between;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 2px;
+    background-color: $base-grey;
+    left: 50%;
+    top: 59px;
+    transform: translateX(-50%);
+
+    @include tablet {
+      width: 8px;
+      top: 53px;
+    }
+
+    @include desktop {
+      width: 11px;
+      top: 55px;
+    }
+  }
+
+  @include tablet {
+    padding-top: 35px;
+  }
+}
+
+.range__input-price {
+  text-align: center;
+  padding: 6px 28px;
+  background-color: $base-white;
+  border: 2px solid $primary-lighter;
+  font-family: "Montserrat-medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: $base-grey;
+  border-radius: 5px;
+
+  @include tablet {
+    padding: 6px 13px;
+  }
+
+  @include desktop {
+    padding: 6px 37px;
+  }
+}

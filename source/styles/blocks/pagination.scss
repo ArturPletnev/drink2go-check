@@ -1,0 +1,82 @@
+.pagination {
+  padding: 40px 0 44px;
+
+  @include tablet {
+    padding: 70px 0 90px;
+  }
+}
+
+.pagination__list {
+  @include list;
+
+  display: flex;
+  column-gap: 20px;
+
+  @include tablet {
+    justify-content: flex-end;
+  }
+}
+
+.pagination__button {
+  padding: 9px 8px 8px;
+  font-family: "Montserrat-regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: $base-primary;
+  background-color: $base-white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+
+  @include tablet {
+    padding: 9px 19px 8px;
+  }
+}
+
+.pagination__button-arrow {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 10px;
+    display: block;
+    mask-image: url("../../icons/stack.svg#arrow-catalog");
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $base-primary;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  @include tablet {
+    width: 91px;
+    height: 40px;
+    padding-left: 24px;
+  }
+
+  &--right {
+    transform: rotate(180deg);
+
+    @include tablet {
+      transform: rotate(0);
+      width: 107px;
+    }
+  }
+}
+
+.pagination__button-text {
+  display: none;
+
+  @include tablet {
+    display: block;
+    padding-right: 4px;
+  }
+}
