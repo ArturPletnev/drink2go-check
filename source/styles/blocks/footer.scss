@@ -1,0 +1,208 @@
+.footer__logo-text {
+  display: none;
+
+  @include desktop {
+    display: block;
+    font-family: "Montserrat-regular", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: $base-black;
+    padding-top: 6px;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+
+  padding-top: 22px;
+  padding-bottom: 20px;
+
+  @include tablet {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 42px;
+  }
+
+  @include desktop {
+    flex-direction: column;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding-top: 39px;
+    padding-left: 20px;
+    justify-content: flex-start;
+    padding-bottom: 33px;
+  }
+}
+
+.footer__line {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 320px;
+    border-bottom: 1px solid $base-secondary;
+    bottom: 0;
+    left: -20px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.footer__information-title {
+  margin: 0;
+  font-family: "Montserrat-bold", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: $base-primary;
+  padding-bottom: 17px;
+
+  &--contacts {
+    padding-bottom: 22px;
+
+    @include tablet {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.footer__information {
+  padding-top: 20px;
+  padding-bottom: 28px;
+
+  @include tablet {
+    padding-bottom: 19px;
+  }
+
+  @include desktop {
+    padding-top: 48px;
+    padding-bottom: 8px;
+  }
+
+  &--contacts {
+    padding-bottom: 20px;
+
+    @include tablet {
+      grid-column: 3/4;
+      grid-row: 2/3;
+    }
+
+    @include desktop {
+      grid-column: 4/5;
+      grid-row: 1/2;
+    }
+  }
+
+  &--market {
+    @include tablet {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+
+    @include desktop {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+  }
+
+  &--media {
+    @include tablet {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+
+    @include desktop {
+      grid-column: 3/4;
+      grid-row: 1/2;
+    }
+  }
+}
+
+.footer__information-address {
+  font-family: "Montserrat-regular", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: $base-black;
+  font-style: normal;
+  padding-left: 19px;
+  padding-bottom: 16px;
+}
+
+.footer__information-phone {
+  padding-left: 19px;
+  font-family: "Montserrat-regular", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: $base-black;
+}
+
+.footer__developer {
+  padding: 17px 0;
+
+  @include tablet {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  @include desktop {
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+}
+
+.footer__information-developer {
+  position: relative;
+  font-family: "Montserrat-regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  color: $base-grey;
+  padding-left: 37px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 16px;
+    right: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $base-grey;
+    mask-image: url("../../icons/stack.svg#logo-html");
+  }
+
+  @include tablet {
+    padding-left: 8px;
+  }
+
+  @include desktop {
+    padding-left: 228px;
+  }
+}
+
+.footer {
+  @include tablet {
+    display: grid;
+    grid-template-columns: 253px 252px 1fr;
+    grid-template-rows: 90px 1fr 1fr;
+  }
+
+  @include desktop {
+    grid-template-columns: 368px 347px 347px 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}

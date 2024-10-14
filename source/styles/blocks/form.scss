@@ -59,7 +59,9 @@
   }
 
   &--country {
-    padding-bottom: 37px;
+    @include desktop {
+      padding-bottom: 37px;
+    }
   }
 }
 
@@ -193,6 +195,9 @@
   &--reset {
     background-color: $base-white;
     color: $base-primary;
-    padding: 8px 35px;
+
+    @include desktop {
+      padding: 8px 35px;
+    }
   }
 }

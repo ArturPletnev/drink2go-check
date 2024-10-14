@@ -1,0 +1,19 @@
+.information {
+  @include list;
+
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.information__link {
+  margin: 0;
+  font-family: "Montserrat-medium", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: $base-black;
+  text-transform: uppercase;
+}

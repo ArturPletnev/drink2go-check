@@ -1,0 +1,31 @@
+.social {
+  @include list;
+
+  display: flex;
+  align-items: center;
+  padding-left: 48px;
+  gap: 40px;
+
+  @include tablet {
+    align-self: self-start;
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+
+  @include desktop {
+    padding-left: 10px;
+  }
+}
+
+.social__item {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.social__link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

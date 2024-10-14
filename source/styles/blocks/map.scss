@@ -1,0 +1,18 @@
+.map__image-wrapper {
+  background-color: $light-grey;
+}
+
+.map__img {
+  object-fit: unset;
+  display: block;
+  width: 100%;
+  height: 420px;
+
+  @include tablet {
+    height: 480px;
+  }
+
+  @include desktop {
+    height: 540px;
+  }
+}

@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="preload" href="#" type="font/woff2" as="font">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicons/180.png">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="icon" href="./favicons/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -435,47 +439,64 @@
     </section>
 
     <section class="map">
-      <div class="map__image">
-        <img src="#" alt="Карта">
+      <h2 class="visually-hidden">Карта местоположения</h2>
+      <div class="map__image-wrapper">
+        <picture class="map__wrapper">
+          <!-- <source type="images/webp" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x"
+            media="(min-width: 1440px)">
+          <source type="images/webp" srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x"
+            media="(min-width: 768px)">
+          <source type="images/webp" srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x"> -->
+          <source type="images/jpg" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x@2x.jpg 2x"
+            media="(min-width: 1440px)">
+          <source type="images/jpg" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x"
+            media="(min-width: 768px)">
+          <img class="map__img" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320"
+            height="420" alt="Карта">
+        </picture>
       </div>
     </section>
 
   </main>
 
-  <footer class="footer">
-    <div class="footer__wrapper">
+  <footer class="footer container">
+    <div class="footer__wrapper footer__line">
       <a class="footer__logo" href="#">
-        <img class="footer__logo-img" src="icons/logo-tablet.svg" alt="Логотип drink2go">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170" height="36">
+          <source media="(min-width: 768px)" srcset="images/logo-desktop.svg" width="170" height="36">
+          <img src="images/logo-tablet.svg" width="82" height="36" alt="Логотип drink2go">
+        </picture>
         <span class="footer__logo-text">Интернет-магазин кофейных напитков</span>
       </a>
       <ul class="footer__social social">
         <li class="social__item">
-          <a class="social__link social__tg" href="#">
-            <svg class="social__vk-img" width="32" height="32">
-              <use href="./images/icons/stack.svg#telegram"></use>
-            </svg>
-            <span class="visually-hidden">Телеграм</span>
-          </a>
-        </li>
-        <li class="social__item">
           <a class="social__link social__vk" href="#">
-            <svg class="social__yt-img" width="32" height="32">
-              <use href="./images/icons/stack.svg#vkontakte"></use>
+            <svg class="social__vk-img" width="20" height="20">
+              <use href="./icons/stack.svg#vk"></use>
             </svg>
             <span class="visually-hidden">В контакте</span>
           </a>
         </li>
         <li class="social__item">
+          <a class="social__link social__pin" href="#">
+            <svg class="social__pin-img" width="20" height="20">
+              <use href="./icons/stack.svg#pinterest"></use>
+            </svg>
+            <span class="visually-hidden">Пинтерест</span>
+          </a>
+        </li>
+        <li class="social__item">
           <a class="social__link social__ok" href="#">
-            <svg class="social__ok-img" width="32" height="32">
-              <use href="./images/icons/stack.svg#youtube"></use>
+            <svg class="social__ok-img" width="20" height="20">
+              <use href="./icons/stack.svg#ok"></use>
             </svg>
             <span class="visually-hidden">Одноклассники</span>
           </a>
         </li>
       </ul>
     </div>
-    <div class="footer__information footer__information--market">
+    <div class="footer__information footer__information--market footer__line">
       <p class="footer__information-title">Интернет-магазин</p>
       <ul class="footer__information-list information">
         <li class="information__item">
@@ -493,7 +514,7 @@
       </ul>
     </div>
 
-    <div class="footer__information footer__information--media">
+    <div class="footer__information footer__information--media footer__line">
       <p class="footer__information-title">Медиа</p>
       <ul class="footer__information-list information">
         <li class="information__item">
@@ -505,19 +526,17 @@
         <li class="information__item">
           <a class="information__link" href="#">Правовая информация</a>
         </li>
-        <li class="information__item">
-          <a class="information__link" href="#">О нас</a>
-        </li>
       </ul>
     </div>
 
-    <div class="footer__information footer__information--contacts">
-      <p class="footer__information-title">Контакты</p>
+    <div class="footer__information footer__information--contacts footer__line">
+      <p class="footer__information-title footer__information-title--contacts">Контакты</p>
       <address class="footer__information-address">Санкт-Петербург, набережная реки Карповки, дом 5</address>
       <a class="footer__information-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
     </div>
-
-    <a class="footer__information-developer" href="https://htmlacademy.ru/intensive/adaptive">Разработано в</a>
+    <div class="footer__developer">
+      <a class="footer__information-developer" href="https://htmlacademy.ru/intensive/adaptive">Разработано в HTML Academy</a>
+    </div>
   </footer>
 </body>
 
