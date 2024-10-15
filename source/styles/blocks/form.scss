@@ -32,7 +32,7 @@
 
 .form__group-title {
   margin: 0;
-  font-family: "Montserrat-semibold", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
@@ -83,7 +83,7 @@
 }
 
 .form__control-label {
-  font-family: "Montserrat-regular", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -199,5 +199,14 @@
     @include desktop {
       padding: 8px 35px;
     }
+  }
+
+  &--reset:hover,
+  :active {
+    color: $base-white;
+  }
+
+  &--reset:active {
+    color: $base-white;
   }
 }

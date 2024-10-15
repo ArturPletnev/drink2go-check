@@ -3,7 +3,7 @@
 
   @include desktop {
     display: block;
-    font-family: "Montserrat-regular", sans-serif;
+    font-family: "Montserrat", "Arial", sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -57,7 +57,7 @@
 
 .footer__information-title {
   margin: 0;
-  font-family: "Montserrat-bold", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
@@ -128,7 +128,8 @@
 }
 
 .footer__information-address {
-  font-family: "Montserrat-regular", sans-serif;
+  position: relative;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -137,16 +138,40 @@
   font-style: normal;
   padding-left: 19px;
   padding-bottom: 16px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    mask-image: url("../../icons/stack.svg#pin");
+    width: 13px;
+    height: 16px;
+    background-color: $base-primary;
+    left: 0;
+    top: 0;
+  }
 }
 
 .footer__information-phone {
+  position: relative;
   padding-left: 19px;
-  font-family: "Montserrat-regular", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   text-align: left;
   color: $base-black;
+
+  &::before {
+    content: "";
+    position: absolute;
+    mask-image: url("../../icons/stack.svg#phone");
+    width: 13px;
+    height: 16px;
+    background-color: $base-primary;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .footer__developer {
@@ -160,18 +185,32 @@
   @include desktop {
     grid-column: 2/4;
     grid-row: 2/3;
+    padding: 8px 0;
   }
 }
 
 .footer__information-developer {
   position: relative;
-  font-family: "Montserrat-regular", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
   text-align: left;
   color: $base-grey;
   padding-left: 37px;
+
+  &:hover {
+    color: $primary-lighter;
+  }
+
+  &:focus {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
 
   &::after {
     position: absolute;

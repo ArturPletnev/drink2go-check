@@ -13,7 +13,7 @@
 
 .catalog__title {
   margin: 0;
-  font-family: "Montserrat-bold", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
@@ -31,7 +31,7 @@
 
 .catalog__description {
   margin: 0;
-  font-family: "Montserrat-bold", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
@@ -91,7 +91,7 @@
 
 .catalog__filter-title {
   margin: 0;
-  font-family: "Montserrat-semibold", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
@@ -102,7 +102,7 @@
 
 .catalog__select-control {
   color: $base-primary;
-  font-family: "Montserrat-semibold", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
@@ -140,17 +140,17 @@
   background-color: $base-white;
 
   @include tablet {
-    padding: 50px 30px 30px;
+    padding: 51px 30px 30px;
   }
 }
 
-.catalog__img {
+.catalog__img-wrapper {
   margin: 0 auto;
 }
 
 .catalog__title-name {
   margin: 0;
-  font-family: "Montserrat-bold", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
@@ -166,18 +166,22 @@
 }
 
 .catalog__inf {
-  padding-top: 24px;
+  padding-top: 20px;
   padding-bottom: 15px;
 
   @include tablet {
-    padding-top: 31px;
+    padding-top: 26px;
     padding-bottom: 19px;
+  }
+
+  @include desktop {
+    padding-top: 27px;
   }
 }
 
 .catalog__description-inf {
   margin: 0;
-  font-family: "Montserrat-regular", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -193,7 +197,7 @@
 .catalog__order-price {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat-semibold", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 20px;
   font-weight: 600;
   line-height: 32px;
@@ -248,7 +252,6 @@
   @include desktop {
     grid-column: 2/4;
     grid-row: 4/5;
-    width: 1000px;
     display: block;
   }
 }

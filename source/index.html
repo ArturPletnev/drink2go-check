@@ -74,10 +74,16 @@
           <li class="slider__item slider__item--flat slider__item--current">
             <div class="slider__list-wrapper container">
               <picture class="slider__img-wrapper">
-                <source srcset="images/flat-white-hero-desktop.png" width="600" height="600"
+                <source type="images/webp" srcset="images/flat-desktop@1x.webp 1x, images/flat-desktop@2x.webp 2x"
                   media="(min-width: 1440px)">
-                <source srcset="images/flat-white-hero-tablet.png" width="476" height="476" media="(min-width: 768px)">
-                <img class="slider__img" src="images/flat-white-hero-mob.png" width="300" height="300"
+                <source type="images/webp" srcset="images/flat-tablet@1x.webp 1x, images/flat-tablet@2x.webp 2x"
+                  media="(min-width: 768px)">
+                <source type="images/webp" srcset="images/flat-mobile@1x.webp 1x, images/flat-mobile@2x.webp 2x">
+                <source type="image/png" srcset="images/flat-desktop@1x.png 1x, images/flat-desktop@2x.png 2x"
+                  media="(min-width: 1440px)" width="600" height="600">
+                <source type="image/png" srcset="images/flat-tablet@1x.png 1x, images/flat-tablet@2x.png 2x"
+                  media="(min-width: 768px)" width="476" height="476">
+                  <img class="slider__img" src="images/flat-mobile@1x.png" width="300" height="300"
                   alt="Баночка с кофейным напитком">
               </picture>
               <div class="slider__wrapper">
@@ -97,9 +103,16 @@
           <li class="slider__item slider__item--lavander">
             <div class="slider__list-wrapper container">
               <picture class="slider__img-wrapper">
-                <source srcset="images/lavender-hero-desktop.png" width="600" height="600" media="(min-width: 1440px)">
-                <source srcset="images/lavender-hero-tablet.png" width="476" height="476" media="(min-width: 768px)">
-                <img class="slider__img" src="images/lavander-hero-mob.png" width="280" height="280"
+                <source type="images/webp" srcset="images/lavender-desktop@1x.webp 1x, images/lavender-desktop@2x.webp 2x"
+                  media="(min-width: 1440px)">
+                <source type="images/webp" srcset="images/lavander-tablet@1x.webp 1x, images/lavander-tablet@2x.webp 2x"
+                  media="(min-width: 768px)">
+                <source type="images/webp" srcset="images/lavender-mobile@1x.webp 1x, images/lavender-mobile@2x.webp 2x">
+                <source type="image/png" srcset="images/lavender-desktop@1x.png 1x, images/lavender-desktop@2x.png 2x"
+                  media="(min-width: 1440px)" width="600" height="600">
+                <source type="image/png" srcset="images/lavander-tablet@1x.png 1x, images/lavander-tablet@2x.png 2x"
+                  media="(min-width: 768px)" width="476" height="476">
+                  <img class="slider__img" src="images/lavender-mobile@1x.png" width="300" height="300"
                   alt="Баночка с кофейным напитком">
               </picture>
               <div class="slider__wrapper">
@@ -115,13 +128,21 @@
               </div>
             </div>
           </li>
-          <li class="slider__item">
+          <li class="slider__item slider__item--espresso">
+            <div class="slider__list-wrapper container">
             <picture class="slider__img-wrapper">
-              <source srcset="images/espresso-hero-desktop.png" width="600" height="600" media="(min-width: 1440px)">
-              <source srcset="images/espresso-hero-tablet.png" width="476" height="476" media="(min-width: 768px)">
-              <img class="slider__img" src="images/espresso-hero-mob.png" width="280" height="280"
-                alt="Баночка с кофейным напитком">
-            </picture>
+                <source type="images/webp" srcset="images/espresso-desktop@1x.webp 1x, images/espresso-desktop@2x.webp 2x"
+                  media="(min-width: 1440px)">
+                <source type="images/webp" srcset="images/espresso-tablet@1x.webp 1x, images/espresso-tablet@2x.webp 2x"
+                  media="(min-width: 768px)">
+                <source type="images/webp" srcset="images/espresso-mobile@1x.webp 1x, images/espresso-mobile@2x.webp 2x">
+                <source type="image/png" srcset="images/espresso-desktop@1x.png 1x, images/espresso-desktop@2x.png 2x"
+                  media="(min-width: 1440px)" width="600" height="600">
+                <source type="image/png" srcset="images/espresso-tablet@1x.png 1x, images/espresso-tablet@2x.png 2x"
+                  media="(min-width: 768px)" width="476" height="476">
+                  <img class="slider__img" src="images/espresso-mobile@1x.png" width="300" height="300"
+                  alt="Баночка с кофейным напитком">
+              </picture>
             <div class="slider__wrapper">
               <p class="slider__paragraph">Новинка!</p>
               <h3 class="slider__title">Тройной Эспрессо</h3>
@@ -133,13 +154,14 @@
               <p class="slider__order-price slider__order-price--new">375₽</p>
               <button class="slider__order-button page__button" type="button">Заказать</button>
             </div>
+            </div>
           </li>
         </ul>
         <div class="slider__controls">
-          <button class="slider__button slider__button--prev" type="button">
+          <button class="slider__button slider__button--prev slider-button-prev" type="button">
             <span class="visually-hidden">Предыдущее фото</span>
           </button>
-          <button class="slider__button slider__button--next" type="button">
+          <button class="slider__button slider__button--next slider-button-next" type="button">
             <span class="visually-hidden">Следующее фото</span>
           </button>
         </div>
@@ -202,13 +224,13 @@
 
               <h3 class="form__group-title">Цена</h3>
               <div class="form__group-item range">
-                <div class="range__wrapper">
-                  <div class="range__scale">
-                    <div class="range__bar">
-                      <button class="range__toggle range__toggle--min" type="button">
+                <div class="range__wrapper" id="slider">
+                  <div class="noUi-base range__scale">
+                    <div class="noUi-origin range__bar">
+                      <button class="noUi-handle noUi-handle-lower range__toggle range__toggle--min" type="button">
                         <span class="visually-hidden">Изменить минимальную цену.</span>
                       </button>
-                      <button class="range__toggle range__toggle--max" type="button">
+                      <button class="noUi-handle noUi-handle-upper range__toggle range__toggle--max" type="button">
                         <span class="visually-hidden">Изменить максимальную цену.</span>
                       </button>
                     </div>
@@ -334,8 +356,11 @@
         <div class="catalog__wrapper">
           <ul class="catalog__list">
             <li class="catalog__item">
-              <img class="catalog__img" src="images/catalog-flat.png" width="130" height="188"
-                alt="Баночка с кофейным напитком">
+                <picture class="catalog__img-wrapper">
+                  <source type="images/webp" srcset="/images/coffee-can-1@1x.webp 1x, images/coffee-can-1@2x.webp 2x">
+                    <img class="catalog__img" src="images/coffee-can-1@1x.png" width="130" height="188"
+                    alt="Баночка с кофейным напитком">
+                </picture>
               <div class="catalog__inf">
                 <h3 class="catalog__title-name">Декаф Флэт Уайт</h3>
                 <p class="catalog__description-inf">Кофе без кофеина из Эфиопии
@@ -347,8 +372,11 @@
               </div>
             </li>
             <li class="catalog__item">
-              <img class="catalog__img" src="images/coffee-can-2.png" width="130" height="188"
-                alt="Баночка с кофейным напитком">
+              <picture class="catalog__img-wrapper">
+                <source type="images/webp" srcset="/images/coffee-can-2@1x.webp 1x, images/coffee-can-2@2x.webp 2x">
+                  <img class="catalog__img" src="images/coffee-can-2@1x.png" width="130" height="188"
+                  alt="Баночка с кофейным напитком">
+              </picture>
               <div class="catalog__inf">
                 <h3 class="catalog__title-name">Декаф Флэт Уайт</h3>
                 <p class="catalog__description-inf">Кофе без кофеина из Эфиопии
@@ -360,8 +388,11 @@
               </div>
             </li>
             <li class="catalog__item">
-              <img class="catalog__img" src="images/coffee-can-3.png" width="130" height="188"
-                alt="Баночка с кофейным напитком">
+              <picture class="catalog__img-wrapper">
+                <source type="images/webp" srcset="/images/coffee-can-3@1x.webp 1x, images/coffee-can-3@2x.webp 2x">
+                  <img class="catalog__img" src="images/coffee-can-3@1x.png" width="130" height="188"
+                  alt="Баночка с кофейным напитком">
+              </picture>
               <div class="catalog__inf">
                 <h3 class="catalog__title-name">Декаф Флэт Уайт</h3>
                 <p class="catalog__description-inf">Кофе без кофеина из Эфиопии
@@ -373,8 +404,11 @@
               </div>
             </li>
             <li class="catalog__item">
-              <img class="catalog__img" src="images/coffee-can-4.png" width="130" height="188"
-                alt="Баночка с кофейным напитком">
+              <picture class="catalog__img-wrapper">
+                <source type="images/webp" srcset="/images/coffee-can-4@1x.webp 1x, images/coffee-can-4@2x.webp 2x">
+                  <img class="catalog__img" src="images/coffee-can-4@1x.png" width="130" height="188"
+                  alt="Баночка с кофейным напитком">
+              </picture>
               <div class="catalog__inf">
                 <h3 class="catalog__title-name">Декаф Флэт Уайт</h3>
                 <p class="catalog__description-inf">Кофе без кофеина из Эфиопии
@@ -386,8 +420,11 @@
               </div>
             </li>
             <li class="catalog__item">
-              <img class="catalog__img" src="images/coffee-can-5.png" width="130" height="188"
-                alt="Баночка с кофейным напитком">
+              <picture class="catalog__img-wrapper">
+                <source type="images/webp" srcset="/images/coffee-can-5@1x.webp 1x, images/coffee-can-5@2x.webp 2x">
+                  <img class="catalog__img" src="images/coffee-can-5@1x.png" width="130" height="188"
+                  alt="Баночка с кофейным напитком">
+              </picture>
               <div class="catalog__inf">
                 <h3 class="catalog__title-name">Декаф Флэт Уайт</h3>
                 <p class="catalog__description-inf">Кофе без кофеина из Эфиопии
@@ -399,8 +436,11 @@
               </div>
             </li>
             <li class="catalog__item">
-              <img class="catalog__img" src="images/coffee-can-6.png" width="130" height="188"
-                alt="Баночка с кофейным напитком">
+              <picture class="catalog__img-wrapper">
+                <source type="images/webp" srcset="/images/coffee-can-6@1x.webp 1x, images/coffee-can-6@2x.webp 2x">
+                  <img class="catalog__img" src="images/coffee-can-6@1x.png" width="130" height="188"
+                  alt="Баночка с кофейным напитком">
+              </picture>
               <div class="catalog__inf">
                 <h3 class="catalog__title-name">Декаф Флэт Уайт</h3>
                 <p class="catalog__description-inf">Кофе без кофеина из Эфиопии
@@ -442,14 +482,14 @@
       <h2 class="visually-hidden">Карта местоположения</h2>
       <div class="map__image-wrapper">
         <picture class="map__wrapper">
-          <!-- <source type="images/webp" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x"
+          <source type="images/webp" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x"
             media="(min-width: 1440px)">
           <source type="images/webp" srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x"
             media="(min-width: 768px)">
-          <source type="images/webp" srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x"> -->
-          <source type="images/jpg" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x@2x.jpg 2x"
+          <source type="images/webp" srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x">
+          <source type="image/jpg" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x"
             media="(min-width: 1440px)">
-          <source type="images/jpg" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x"
+          <source type="image/jpg" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x"
             media="(min-width: 768px)">
           <img class="map__img" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320"
             height="420" alt="Карта">

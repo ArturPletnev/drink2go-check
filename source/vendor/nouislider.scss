@@ -1,0 +1,41 @@
+.noUi-base {
+  position: relative;
+  width: 280px;
+  height: 2px;
+  background-color: $form;
+
+  @include tablet {
+    width: 223px;
+  }
+
+  @include desktop {
+    width: 318px;
+  }
+}
+
+.noUi-origin {
+  position: absolute;
+  width: 260px;
+  background-color: $primary-lighter;
+  height: 4px;
+
+  @include tablet {
+    width: 203px;
+  }
+
+  @include desktop {
+    width: 298px;
+  }
+}
+
+.noUi-handle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid $primary-lighter;
+  background-color: $base-white;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}

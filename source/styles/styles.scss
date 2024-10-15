@@ -8,6 +8,9 @@
 @import "./mixins/media.scss";
 @import "./mixins/mixins.scss";
 
+/* VENDOR */
+@import "../vendor/noUislider.scss";
+
 /* BLOCKS */
 @import "./blocks/header.scss";
 @import "./blocks/header-menu.scss";

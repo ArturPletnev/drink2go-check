@@ -10,6 +10,8 @@
 }
 
 .slider__list-wrapper {
+  position: relative;
+
   @include desktop {
     display: grid;
     grid-template-columns: 715px 1fr;
@@ -69,7 +71,7 @@
 
 .slider__paragraph {
   margin: 0;
-  font-family: "Montserrat-bold", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
@@ -91,7 +93,7 @@
 
 .slider__title {
   margin: 0;
-  font-family: "Montserrat-bold", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 700;
   line-height: 48px;
@@ -113,7 +115,7 @@
 
 .slider__description {
   margin: 0;
-  font-family: "Montserrat-regular", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -157,7 +159,7 @@
   margin: 0;
 
   &--old {
-    font-family: "Montserrat-regular", sans-serif;
+    font-family: "Montserrat", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 32px;
@@ -169,7 +171,7 @@
   }
 
   &--new {
-    font-family: "Montserrat-semibold", sans-serif;
+    font-family: "Montserrat", "Arial", sans-serif;
     font-size: 20px;
     font-weight: 600;
     line-height: 32px;
@@ -227,20 +229,19 @@
 .slider__controls {
   position: absolute;
   top: 317px;
-  left: -9px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 334px;
   display: flex;
   justify-content: space-between;
 
   @include tablet {
     top: 311px;
-    left: 24px;
     width: 720px;
   }
 
   @include desktop {
     top: 346px;
-    left: 24px;
     width: 1392px;
   }
 }
@@ -248,8 +249,10 @@
 .slider__img-wrapper {
   @include tablet {
     position: absolute;
-    top: 355px;
-    left: 146px;
+    top: 298px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 476px;
   }
 
   @include desktop {
@@ -257,5 +260,7 @@
     grid-column: 1/2;
     grid-row: 1/3;
     padding-left: 85px;
+    transform: translateX(0);
+    width: 699px;
   }
 }

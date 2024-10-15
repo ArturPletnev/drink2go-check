@@ -8,7 +8,7 @@
 
 .information__link {
   margin: 0;
-  font-family: "Montserrat-medium", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
@@ -16,4 +16,12 @@
   text-align: left;
   color: $base-black;
   text-transform: uppercase;
+
+  &:hover {
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
 }

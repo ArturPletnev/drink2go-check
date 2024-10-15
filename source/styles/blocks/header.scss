@@ -7,7 +7,6 @@
   display: flex;
   padding: 12px 5px 9px 20px;
   position: relative;
-  margin: 0;
 
   @include tablet {
     padding-top: 13px;
@@ -25,7 +24,7 @@
 
 .header__logo-text {
   display: none;
-  font-family: "Montserrat-regular", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -71,6 +70,10 @@
   background-color: transparent;
   border: none;
   padding: 16px 27px;
+
+  &:active {
+    background-color: $base-secondary;
+  }
 
   &::before {
     content: "";

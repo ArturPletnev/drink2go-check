@@ -39,6 +39,19 @@
   color: $base-black;
   text-transform: uppercase;
 
+  &:hover {
+    color: $base-primary;
+  }
+
+  &:focus {
+    color: $base-primary;
+  }
+
+  &:active {
+    color: $base-primary;
+    background-color: $base-secondary;
+  }
+
   @include tablet {
     padding: 32px 20px;
   }

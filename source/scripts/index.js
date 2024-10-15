@@ -1,3 +1,7 @@
+import noUiSlider from 'nouislider';
+
+import 'nouislider/dist/nouislider.css';
+
 const toggleButtonElement = document.querySelector('.header__button-toggle');
 const menuElement = document.querySelector('.header__nav');
 
@@ -11,7 +15,6 @@ const nextButton = document.querySelector('.slider__button--next');
 const prevButton = document.querySelector('.slider__button--prev');
 const sliderItemsTags = document.querySelectorAll('.slider__item');
 const bullets = document.querySelectorAll('.slider__pagination-button');
-const slider = document.querySelector('.slider');
 let currentIndex = 0; // Текущий индекс, инициализация с 0
 
 const renderActiveScreen = () => {
@@ -59,3 +62,14 @@ bullets.forEach((bullet, index) => {
 // Инициализация, чтобы отобразить первый экран
 renderActiveScreen();
 
+
+const range = document.getElementById('slider');
+
+noUiSlider.create(range, {
+  start: [20, 80],
+  connect: true,
+  range: {
+    'min': 0,
+    'max': 900
+  }
+});
